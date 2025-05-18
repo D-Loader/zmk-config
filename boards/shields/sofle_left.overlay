@@ -1,0 +1,15 @@
+{
+    leds {
+        compatible = "ws2812-spi";
+        status = "okay";
+        label = "LED_STRIP";
+
+        chain-length = <21>;  // Adjust this to your actual number of LEDs per side
+        spi-max-frequency = <4000000>;
+
+        spi = <&spi1>; // Use the SPI bus or use a GPIO-compatible driver for one-wire
+        reg = <0>;     // Chip select index (not used for WS2812 but needed syntactically)
+
+        color-order = "GRB"; // SK6812 uses GRB like WS2812
+    };
+};
