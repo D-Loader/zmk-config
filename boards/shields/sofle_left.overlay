@@ -4,7 +4,7 @@
         status = "okay";
         label = "LED_STRIP";
 
-        chain-length = <21>;  // Adjust this to your actual number of LEDs per side
+        chain-length = <36>;  // Adjust this to your actual number of LEDs per side
         spi-max-frequency = <4000000>;
 
         spi = <&spi1>; // Use the SPI bus or use a GPIO-compatible driver for one-wire
